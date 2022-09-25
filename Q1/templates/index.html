@@ -1,0 +1,16 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+
+<main class="page lanidng-page">
+    <section class="portfolio-block block-intro">
+        <div class="container">
+            <div class="avatar" style="background-image:url(&quot;assets/img/avatars/avatar.jpg&quot;);"></div>
+            <div class="about-me">
+                <p>Hello! This is a <strong>ToDo Website</strong>.<br> You can manage your daily tasks over here!.</p><a class="btn btn-outline-primary" role="button" href="{% url 'taskAdd' %}">Add Task</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}

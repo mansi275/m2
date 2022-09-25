@@ -1,0 +1,18 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<main class="page projects-page">
+    <section class="portfolio-block projects-cards">
+        <h2 style="text-align: center">Add Tasks Form</h2>
+    <form action="{% url 'taskAdd' %}" method="post">
+        {% csrf_token %}
+        Category: <input type="text" name="category" placeholder=""><br/>
+        Description: <input type="text" name="description"><br/>
+        Due On: <input type="date" name="due_on"><br/>
+        <input type="submit" value="Submit"><br/>
+    </form>
+    </section>
+</main>
+{% endblock content %}
